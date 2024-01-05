@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
+import userReducer from './features/user'
 
 // store - where all the state lies for the application
 //reducers - to handle state operations or changes
 const store = configureStore({
-  reducer: {},
+  reducer: { user: userReducer },
 })
 
 //Provider wraps the content where redux is used and we specify the store(states)
